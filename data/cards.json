@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "sample-travel-card",
+    "name": "Sample Travel Card",
+    "issuer": "Example Bank",
+    "category": "Travel",
+    "annualFee": "$95",
+    "rewardSummary": "Flexible travel rewards with useful everyday earning categories.",
+    "bestFor": "Travelers who want transferable points and simple redemptions.",
+    "referralUrl": "#",
+    "referralLabel": "View referral offer",
+    "featured": true,
+    "updated": "2026-11-06",
+    "notes": [
+      "Replace this demo with a card you actually use or recommend.",
+      "Verify current terms on the issuer website before publishing."
+    ]
+  },
+  {
+    "slug": "sample-hotel-card",
+    "name": "Sample Hotel Card",
+    "issuer": "Example Bank",
+    "category": "Hotel",
+    "annualFee": "$0 intro / varies",
+    "rewardSummary": "Hotel-focused rewards and benefits for frequent stays.",
+    "bestFor": "Travelers who regularly stay with one hotel program.",
+    "referralUrl": "#",
+    "referralLabel": "View referral offer",
+    "featured": true,
+    "updated": "2026-11-06",
+    "notes": [
+      "Keep annual-fee and benefit language current.",
+      "Avoid implying guaranteed approval or a fixed credit limit."
+    ]
+  },
+  {
+    "slug": "sample-cash-back-card",
+    "name": "Sample Cash Back Card",
+    "issuer": "Example Credit Union",
+    "category": "Cash Back",
+    "annualFee": "$0",
+    "rewardSummary": "Straightforward cash back for everyday purchases.",
+    "bestFor": "Readers who prefer cash rewards over travel points.",
+    "referralUrl": "#",
+    "referralLabel": "View referral offer",
+    "featured": false,
+    "updated": "2026-11-06",
+    "notes": ["Replace with your actual link and current issuer terms."]
+  }
+]

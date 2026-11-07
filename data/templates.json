@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Credit Card Rewards Tracker",
+    "description": "CSV starter sheet for annual fees, statement credits, points, renewal dates, and notes.",
+    "href": "/downloads/credit-card-tracker.csv",
+    "format": "CSV"
+  },
+  {
+    "title": "Award Trip Planning Checklist",
+    "description": "A practical checklist for positioning flights, award searches, transfer timing, hotels, and backup plans.",
+    "href": "/downloads/award-trip-planning-checklist.md",
+    "format": "Markdown"
+  }
+]

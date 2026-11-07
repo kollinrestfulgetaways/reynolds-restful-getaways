@@ -1,0 +1,11 @@
+import http from 'node:http';
+import fs from 'node:fs';
+import path from 'node:path';
+import { spawnSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const dist = path.join(root,'dist');
+spawnSync(process.execPath,[path.join(root,'scripts/build.mjs')],{stdio:'inherit'});
+const mime={'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.svg':'image/svg+xml','.xml':'application/xml','.csv':'text/csv','.md':'text/markdown'};
+const server=http.createServer((req,res)=>{let url=decodeURIComponent(req.url.split('?')[0]);let file=path.join(dist,url);if(url.endsWith('/')) file=path.join(file,'index.html');if(!path.extname(file)&&fs.existsSync(file)&&fs.statSync(file).isDirectory()) file=path.join(file,'index.html');if(!fs.existsSync(file)){file=path.join(dist,'404.html');res.statusCode=404;}res.setHeader('Content-Type',mime[path.extname(file)]||'application/octet-stream');fs.createReadStream(file).pipe(res);});
+server.listen(4321,'0.0.0.0',()=>console.log('Preview: http://localhost:4321'));
