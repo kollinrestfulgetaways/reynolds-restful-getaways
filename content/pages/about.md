@@ -7,6 +7,8 @@ Reynolds Restful Getaways is a travel blog focused on making trips easier to pla
 ## The approach
 The trip comes first. I start with where I want to go and then work backward to the flights, hotels, points, cards, and tools that can make the experience better or more affordable.
 
+A big reason this site exists is because points and miles helped make trips possible that once felt out of reach for us. One of the clearest examples was our first points trip to Paris — a destination my wife had dreamed about since childhood.
+
 You will find travel guides, award-search walkthroughs, points-and-miles explainers, card notes, free planning templates, and honest breakdowns of the decisions behind a trip.
 
 ## Transparency
