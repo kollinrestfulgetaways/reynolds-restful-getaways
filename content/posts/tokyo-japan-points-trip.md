@@ -5,7 +5,7 @@ date: 2026-11-07
 tag: Trip Report
 featured: true
 image: /images/tokyo-hachiko.jpg
-gallery: /images/tokyo-kimono.jpg|/images/tokyo-kaminarimon.jpg|/images/tokyo-pagoda.jpg|/images/tokyo-torii.jpg|/images/tokyo-shrine-gate.jpg|/images/tokyo-evening.jpg
+gallery: /images/tokyo-kimono.jpg|/images/tokyo-shibuya-night-selfie.jpg|/images/tokyo-kaminarimon.jpg|/images/tokyo-sensoji-gate.jpg|/images/tokyo-pagoda.jpg|/images/tokyo-torii-close.jpg|/images/tokyo-buddha.jpg|/images/tokyo-woodworking.jpg|/images/tokyo-vending-machine.jpg|/images/tokyo-shibuya-street.jpg|/images/tokyo-photo-booth.jpg|/images/tokyo-airplane-wing.jpg
 referral: chase-sapphire
 draft: false
 ---
