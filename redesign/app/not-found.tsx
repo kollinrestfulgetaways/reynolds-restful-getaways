@@ -1,0 +1,1 @@
+export default function NotFound(){return <div className="not-found"><span className="eyebrow" style={{justifyContent:'center'}}>A little off the itinerary</span><h1>Let’s get you<br/>back on track.</h1><p>We couldn’t find that page.</p><a className="button navy" href="/">Back to the homepage →</a></div>}

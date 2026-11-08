@@ -1,0 +1,4 @@
+import {env} from 'cloudflare:workers';
+import {getChatGPTUser} from '@/app/chatgpt-auth';
+import {ownerId} from '@/lib/content';
+export async function GET(){const user=await getChatGPTUser();if(!user||user.userId!==ownerId)return new Response('Unauthorized',{status:403});if(!env.DB)return new Response('Database unavailable',{status:503});const data=await env.DB.prepare('SELECT id,kind,name,email,package,message,created_at FROM requests ORDER BY id DESC').all();const cols=['id','kind','name','email','package','message','created_at'];const cell=(v:unknown)=>{let s=String(v??'');if(/^[\s]*[=+@-]/.test(s))s="'"+s;return '"'+s.replace(/"/g,'""')+'"'};return new Response([cols.join(','),...data.results.map(r=>cols.map(c=>cell(r[c])).join(','))].join('\r\n'),{headers:{'Content-Type':'text/csv; charset=utf-8','Content-Disposition':'attachment; filename="rrg-submissions.csv"','Cache-Control':'no-store'}});}
