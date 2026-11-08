@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /studio
+Disallow: /api/
+Disallow: /go/
+Sitemap: https://reynoldsrestfulgetaways.com/sitemap.xml

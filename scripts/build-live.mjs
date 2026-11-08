@@ -1,0 +1,16 @@
+import './build.mjs';
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const dist=path.join(root,'dist');
+const overlay=path.join(root,'redesign-pages');
+if(!fs.existsSync(path.join(overlay,'index.html')))throw new Error('Redesigned pages are missing.');
+const legacy=fs.readFileSync(path.join(dist,'sitemap.xml'),'utf8');
+const modern=fs.readFileSync(path.join(overlay,'sitemap-redesign.xml'),'utf8');
+fs.cpSync(overlay,dist,{recursive:true});
+const urls=new Map();
+for(const xml of [legacy,modern])for(const match of xml.matchAll(/<url>.*?<loc>(.*?)<\/loc>.*?<\/url>/gs))urls.set(match[1].replace(/\/$/,''),match[0]);
+fs.writeFileSync(path.join(dist,'sitemap.xml'),`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${[...urls.values()].join('')}</urlset>\n`);
+fs.rmSync(path.join(dist,'sitemap-redesign.xml'),{force:true});
+console.log('Applied the redesigned GitHub Pages site; legacy articles and downloads preserved.');

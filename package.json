@@ -4,8 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/build.mjs",
+    "build": "node scripts/build-live.mjs",
     "dev": "node scripts/dev.mjs",
-    "new:post": "node scripts/new-post.mjs"
+    "new:post": "node scripts/new-post.mjs",
+    "export:redesign": "node scripts/export-pages.mjs"
   }
 }
